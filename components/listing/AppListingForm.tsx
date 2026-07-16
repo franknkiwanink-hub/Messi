@@ -152,8 +152,6 @@ async function uploadBuildFile(file: File, idToken: string): Promise<ListingBuil
   if (!res.ok) throw new Error(json.error || file.name + " upload failed");
   return {
     filename: file.name,
-    contentType: json.contentType || "",
-    size: json.size ?? file.size,
     url: json.url || null,
     storagePath: json.storagePath || null,
   };
