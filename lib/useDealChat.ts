@@ -295,7 +295,7 @@ export function useDealChat(chatRoomId: string) {
 
   // ── Send a text message (with AI scam guard) ──
   const sendMessage = useCallback(
-    async (text: string): Promise<{ blocked?: string } | void> => {
+    async (text: string): Promise<{ blocked?: string } | undefined> => {
       const trimmed = text.trim();
       if (!trimmed || !chatRoomId || !room) return;
       const user = auth.currentUser;
