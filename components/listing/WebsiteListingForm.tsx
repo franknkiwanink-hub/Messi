@@ -704,7 +704,7 @@ export default function WebsiteListingForm() {
                 </button>
               </div>
               <div style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", marginTop: 4 }}>
-                Full link to your live website. If it's a template, click the button to skip URL.
+                Full link to your live website. If it&apos;s a template, click the button to skip URL.
               </div>
               {errors.url && <ErrorBox>{errors.url}</ErrorBox>}
             </div>
