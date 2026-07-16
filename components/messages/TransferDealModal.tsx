@@ -140,11 +140,11 @@ export default function TransferDealModal(props: TransferDealModalProps) {
           onClose={() => setPreviewOpen(false)}
           onConfirm={async () => {
             const result = await tdm.finalizeTransfer();
-            if (result.ok) {
-              setPreviewOpen(false);
-            } else {
+            if (!result.ok) {
               await alert({ theme: "danger", title: "Transfer Failed", msg: result.error });
+              return;
             }
+            setPreviewOpen(false);
           }}
         />
       ) : null}
@@ -550,14 +550,14 @@ function GithubCard({
     setInviteMsg({ text: "", kind: "" });
     const result = await tdm.inviteGithubCollaborator(username);
     setInviting(false);
-    if (result.ok) {
-      setInviteMsg({
-        text: result.status === "invited" ? "Invite sent! The buyer will see it in their GitHub notifications." : "Buyer added successfully.",
-        kind: "success",
-      });
-    } else {
+    if (!result.ok) {
       setInviteMsg({ text: result.error, kind: "error" });
+      return;
     }
+    setInviteMsg({
+      text: result.status === "invited" ? "Invite sent! The buyer will see it in their GitHub notifications." : "Buyer added successfully.",
+      kind: "success",
+    });
   }
 
   return (
