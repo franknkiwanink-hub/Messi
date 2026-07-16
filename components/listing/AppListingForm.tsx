@@ -709,7 +709,7 @@ export default function AppListingForm() {
           List an <em style={{ fontStyle: "normal", color: "rgba(251,191,36,0.85)" }}>App</em>
         </h1>
         <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", marginBottom: 28 }}>
-          Add your app's details, media, platforms, and price to list it on the marketplace.
+          Add your app&apos;s details, media, platforms, and price to list it on the marketplace.
         </p>
 
         {/* Step tabs */}
@@ -887,10 +887,10 @@ export default function AppListingForm() {
               }}
             >
               <div style={{ fontSize: 13, fontWeight: 700, color: globalNotLive ? ACCENT : "#fff" }}>
-                {globalNotLive ? "✓ " : ""}App isn't published anywhere yet
+                {globalNotLive ? "✓ " : ""}App isn&apos;t published anywhere yet
               </div>
               <div style={{ fontSize: 12, opacity: 0.5, marginTop: 4 }}>
-                Selecting this clears platform selections and lets buyers preview via an uploaded build instead. Price is still required; revenue/expenses/monetization won't apply yet.
+                Selecting this clears platform selections and lets buyers preview via an uploaded build instead. Price is still required; revenue/expenses/monetization won&apos;t apply yet.
               </div>
               {globalNotLive && (
                 <div style={{ marginTop: 10 }} onClick={(e) => e.stopPropagation()}>
@@ -974,7 +974,7 @@ export default function AppListingForm() {
 
             {globalNotLive && (
               <div style={{ padding: 12, background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", borderRadius: 10, marginBottom: 16, fontSize: 12, color: ACCENT }}>
-                This app is marked "Not Live" — revenue, expenses, and monetization model aren't applicable yet and are disabled. Price is still required.
+                This app is marked &quot;Not Live&quot; — revenue, expenses, and monetization model aren&apos;t applicable yet and are disabled. Price is still required.
               </div>
             )}
 
